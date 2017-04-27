@@ -43,6 +43,7 @@ int get_pivot(int k, int n, float matrix[MAX_SIZE][MAX_SIZE]) {
 
 void copy_line(int size, float from[MAX_SIZE], float to[MAX_SIZE]){
     int col;
+    #pragma omp parallel for
     for (col = 0; col < size ; col++){
         to[col] = from[col] ;
     }
@@ -71,6 +72,7 @@ void gauss_reduce(int size, float matrix[MAX_SIZE][MAX_SIZE], float b[MAX_SIZE])
         if (step != pivot){
             swap_lines(step, pivot, size, matrix, b) ;
         }
+        #pragma omp parallel for
         for (lin = step + 1 ; lin < size ; lin++) {
             multiplier = (matrix[lin][step] / matrix[step][step]) ;
             matrix[lin][step] = 0 ;
