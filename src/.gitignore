@@ -1,0 +1,5 @@
+.*.sw?
+*.pyc
+*.png
+*.eps
+*.csv
