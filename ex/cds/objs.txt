@@ -1,0 +1,5 @@
+Sirius
+HD 1003
+M100
+M34
+VY Canis Majoris
