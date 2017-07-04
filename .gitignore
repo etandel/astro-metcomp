@@ -1,4 +1,6 @@
-build/
+build
+bin
 .*.sw?
 *.pdf
+*.pyc
 
